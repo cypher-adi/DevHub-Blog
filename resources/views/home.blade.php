@@ -15,9 +15,9 @@
                 <div class="pr-4"><strong>373</strong> Followers</div>
                 <div class="pr-4"><strong>391</strong> Following</div>
             </div>
-            <div class='pt-4 font-weight-bold'>Aditya Kumar</div>
-            <div>aka "Cypher" | Computer Geek | Web Developer</div>
-            <div><a href="#">www.cypher-resume.herokuapp.com</a></div>
+            <div class='pt-4 font-weight-bold'> {{ $user->profile->title}} </div>
+            <div>{{ $user->profile->description}}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
     <div class="row pt-5">
