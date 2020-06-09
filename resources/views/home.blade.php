@@ -7,8 +7,9 @@
             <img src="/img/cypher.jpg" style="width:150px;" class="rounded-circle ">
         </div>
         <div class="col-9 pt-5">
-            <div>
+            <div class="d-flex justify-content-between align-items-baseline">
                 <h1> {{ $user->username }} </h1>
+                <a href="#" class="btn btn-primary">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pr-4"><strong>44</strong> Posts</div>
