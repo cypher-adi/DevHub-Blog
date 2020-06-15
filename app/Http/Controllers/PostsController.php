@@ -23,6 +23,8 @@ class PostsController extends Controller
             'image' => ['required', 'image'],
         ]);
 
+        dd(request('image')->store('uploads', 'public'));
+
         auth()->user()->posts()->create($data);
 
         dd(request()->all());
