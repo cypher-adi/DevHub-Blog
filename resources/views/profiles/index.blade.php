@@ -9,7 +9,9 @@
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1> {{ $user->username }} </h1>
-                <a href="/p/create" class="btn btn-primary">Add New Post</a>
+                @can('update', $user->profile)
+                    <a href="/p/create" class="btn btn-primary">Add New Post</a>
+                @endcan
             </div>
             <div class="d-flex">
                 <div class="pr-4"><strong>{{ $user->posts->count() }}</strong> Posts</div>
@@ -22,7 +24,7 @@
             @can('update', $user->profile)
                 <div><a href="/profile/{{ $user->id }}/edit" class="btn btn-sm btn-primary">Edit Profile</a></div>
             @endcan
-            
+
         </div>
     </div>
     <div class="row pt-5">
